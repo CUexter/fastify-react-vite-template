@@ -1,0 +1,19 @@
+{
+  "name": "react-side",
+  "description": "",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest --passWithNoTests --run",
+    "test:coverage:watch": "vitest --coverage",
+    "test:coverage": "vitest --run --coverage",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0"
+  }
+}

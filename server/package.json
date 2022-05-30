@@ -1,0 +1,23 @@
+{
+  "name": "node-side",
+  "version": "0.0.0",
+  "description": "",
+  "config": {
+    "entry": "server",
+    "buildDir": "dist"
+  },
+  "scripts": {
+    "build": "cross-var esbuild src/$npm_package_config_entry.ts --bundle --platform=node --minify --outdir=../$npm_package_config_buildDir",
+    "preview": "npm run build && npm run start",
+    "start": "cross-var node ../$npm_package_config_buildDir/$npm_package_config_entry",
+    "dev": "cross-var nodemon --exec ts-node -r tsconfig-paths/register --watch src/ -e ts src/$npm_package_config_entry",
+    "test": "vitest run",
+    "test:coverage:watch": "vitest --coverage",
+    "test:coverage": "vitest --run --coverage",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "fastify": "^3.29.0"
+  }
+}
