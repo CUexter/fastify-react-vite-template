@@ -20,7 +20,7 @@
       "@/*": ["./client/src/*"],
       "#/*": ["./server/src/*"]
     },
-    "types": ["vitest/globals", "google.maps"]
+    "types": ["vitest/globals"]
   },
   "exclude": ["node_modules", "**/*/lib", "**/*/dist"],
   "include": ["client/src", "server/src"],
